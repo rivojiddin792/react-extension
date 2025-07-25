@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+}
+
+body {
+  background-color: hsl(252, 100%, 99%);
+  color: hsl(252, 6%, 20%);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.darkmode-bg {
+  background-color: hsl(252, 6%, 20%);
+  color: hsl(252, 6%, 83%);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo img {
+  width: 40px;
+}
+
+#logo h2 {
+  font-size: 24px;
+}
+
+#toggleTheme {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#toggleTheme img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+#toggleTheme:hover img {
+  transform: rotate(90deg);
+}
+
+#options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#options h1 {
+  font-size: 2rem;
+}
+
+#filter {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: hsl(252, 6%, 90%);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: hsl(252, 6%, 80%);
+}
+
+.btn.auto {
+  background-color: hsl(252, 100%, 67%);
+  color: white;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-single {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.3s ease-in-out;
+}
+
+body.darkmode-bg .card-single {
+  background-color: hsl(252, 6%, 30%);
+  color: hsl(252, 6%, 90%);
+}
+
+.card-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-header img {
+  width: 48px;
+  height: 48px;
+}
+
+.info-header h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-remove {
+  padding: 6px 10px;
+  background-color: hsl(0, 80%, 65%);
+  border: none;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+  background-color: hsl(0, 80%, 55%);
+}
+
+.toggle {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.desativada {
+  opacity: 0.4;
+}
